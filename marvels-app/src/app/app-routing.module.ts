@@ -9,10 +9,12 @@ import { AuthService } from './auth/auth.service';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AuthGuard } from './auth/auth-guard';
+import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [
   { path:'', redirectTo: '/home', pathMatch: 'full'},
   { path:'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard]},
   { path:'cart', component: CartComponent, canActivate: [AuthGuard] },
   { path:'seller', component: SellerComponent, canActivate: [AuthGuard]}, 
   { path:'addProduct', component: AddProductComponent, canActivate: [AuthGuard] },
