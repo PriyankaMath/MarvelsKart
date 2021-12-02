@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="card col-3" *ngFor="let product of productList">
+            <img class="product-image" src="{{product.image}}">
+            <h5 class="product-name">{{product.name}}</h5>
+            <p><strong>Price:</strong> {{product.price | currency}}</p>
+            <div class="btn-add-wrap">
+                <button class="btn btn-primary" (click)=addToCart(product)>Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>

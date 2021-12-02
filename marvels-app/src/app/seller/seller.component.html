@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6 btn-add-product">
+            <button routerLink="/addProduct" class="btn btn-success">Add Product</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6 list-group-item" *ngFor="let product of products">
+            <div class="products">
+                <div class="product-details">
+                    <h4>{{product.name}}</h4>
+                    <p class="price">{{product.price | currency}}</p>
+                </div>
+                <!-- <div class="product-description">{{product.description}}</div> -->
+            </div>
+            <span class="col-2">
+                <img src="{{product.image}}" class="img-responsive">
+            </span>
+        </div>
+    </div>
+</div>
+
