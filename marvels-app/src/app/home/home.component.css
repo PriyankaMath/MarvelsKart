@@ -1,0 +1,28 @@
+.container {
+    padding: 20px 0px;
+}
+.product-image {
+    padding: 15px;
+    height: 200px;
+    width: 260px;
+}
+.btn-add-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.card {
+    margin: 40px;
+}
+.product-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+.product-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}

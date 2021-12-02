@@ -1,0 +1,11 @@
+.user-wrap {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.heading {
+    padding-top: 20px;
+}
+.img-responsive {
+    max-height: 60px;
+}

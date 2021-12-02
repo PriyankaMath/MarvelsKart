@@ -1,0 +1,16 @@
+.cart {
+    color: white;
+    padding: 0px 15px;
+}
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tab-link {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.right {
+    display: flex;
+}

@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container">
+    <h2 class="heading">Users:</h2>
+</div>
+<div class="user-wrap">
+    <div class="container">
+        <table class="table table-striped table-hover table-borderless align-middle">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Operation</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.userrole}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <h2 class="heading">Orders:</h2>
+</div>
+<div class="user-wrap">
+    <div class="container">
+        <table class="table table-striped table-hover table-borderless align-middle">
+            <thead>
+                <th>Order Id</th>
+                <th>Product Image</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>User</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>{{order.id}}</td>
+                    <td><img src="{{order.image}}" class="img-responsive"></td>
+                    <td>{{order.name}}</td>
+                    <td>{{order.amount}}</td>
+                    <td>{{order.users.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

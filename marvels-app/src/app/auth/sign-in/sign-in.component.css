@@ -1,0 +1,11 @@
+.card {
+    padding: 30px;
+    margin-top: 30px;;
+}
+.form-group{
+    padding: 10px;
+}
+.btn-signin {
+    display: flex;
+    justify-content: center;
+}

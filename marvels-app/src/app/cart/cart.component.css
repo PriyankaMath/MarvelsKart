@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    padding: 25px;
+}
+.cart-img {
+    display: flex;
+    align-self: center;
+    padding: 15px;
+    height: 200px;
+    width: 235px;
+}
+.btn-add-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+.item-delete {
+    color: rgb(218, 13, 13);
+    cursor: pointer;
+}
+.item-delete:hover {
+    color: rgba(190, 15, 15, 0.726);
+}
+.product-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30ch;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}

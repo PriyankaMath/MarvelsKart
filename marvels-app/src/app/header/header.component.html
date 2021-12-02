@@ -1,0 +1,28 @@
+<div class="col-12 navigation">
+    <nav class="navbar navbar-dark bg-dark align-items-center">
+        <div class="container-fluid justify-content-space-between">
+            <div>
+                <div class="navbar-nav tabs">
+                    <a class="navbar-brand"><h4>Marvel's Kart</h4></a>
+                    <a routerLinkActive="active" routerLink="/home" class="nav-link tab-link">Products</a>
+                    <a routerLinkActive="active" routerLink="/seller" *ngIf="userrole == 2 || userrole == 1" class="nav-link tab-link">Seller</a>
+                    <a routerLinkActive="active" routerLink="/admin" *ngIf="userrole == 1" class="nav-link tab-link">Admin</a>
+                </div>
+            </div>
+            
+            <!-- <form class="d-flex col-6">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search Category">
+                    <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
+                </div>
+            </form> -->
+            <div class="right">
+                <a routerLink="/cart" class="cart"><i class="fas fa-shopping-cart fa-2x"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+                </a>
+                <button class="btn btn-secondary" (click)="onLogout()">Log out</button>
+                <!-- <button class="btn btn-primary" (click)="logout()" *ngIf="isLoggedIn()">Sign out</button> -->
+            </div>
+        </div>
+    </nav>
+</div>
