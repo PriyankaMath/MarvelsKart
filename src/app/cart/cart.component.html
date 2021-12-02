@@ -1,0 +1,65 @@
+<!-- <app-header></app-header> -->
+<ng-container *ngIf="products.length !=0 && !orderPlaced">
+    <div class=container>
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-repsonsive table-hover table-borderless align-middle">
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <!-- <th>Description</th> -->
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}"></td>
+                            <!-- <td style="width: 12%;" class="product-description">{{item.description}}</td> -->
+                            <td style="width: 12%;">{{item.price | currency}}</td>
+                            <td style="width: 12%;">
+                                <a class="item-delete" (click)="removeItem(i)"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <!-- <button class="btn btn-danger" (click)="emptyCart()">Empty Cart</button> -->
+                <button routerLink="/home" class="btn btn-primary">Shop More</button>
+                <button class="btn btn-success" (click)="placeOrder(products)">Place Order</button>
+                <!-- <h4>Grand Total: {{grandTotal}}</h4> -->
+            </div>
+            <!-- <div>
+                <strong>Grand Total: ${{grandTotal}}</strong>
+            </div> -->
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length == 0 && !orderPlaced">
+    <div class="container">
+        <div class="card">
+            <h4 class="card-title">My Cart</h4>
+            <img class="cart-img" src="../../assets/images/empty-cart.png">
+            <h4 class="card-title">Your cart is empty!</h4>
+            <div class="btn-add-wrap">
+                <button routerLinkActive="active" routerLink="/home" class="btn btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="orderPlaced">
+    <div class="container">
+        <div class="card">
+            <h4 class="card-title">Order Placed!</h4>
+            <div class="btn-add-wrap">
+                <button routerLinkActive="active" routerLink="/home" class="btn btn-primary">Shop More</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+

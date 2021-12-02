@@ -1,0 +1,33 @@
+<!-- <app-header></app-header> -->
+<div class="container product-wrap col-8">
+    <h4 class="heading">Add New Product</h4>
+<form #f="ngForm">
+    <label for="name">Product Name</label>
+    <input type="text" class="form-control mb-4"
+            id="name" placeholder="Product Name" 
+            name="name" [(ngModel)]="product.name">
+
+    <label for="price">Price</label>
+    <input type="text" class="form-control mb-4" 
+            id="price" placeholder="$Price" 
+            name="price" [(ngModel)]="product.price">
+    
+    <label for="category">Category</label>
+    <input type="text" class="form-control mb-4" 
+            id="category" placeholder="Category" 
+            name="category" [(ngModel)]="product.category">
+
+    <!-- <label for="description">Product Description</label>
+    <textarea class="form-control mb-4" id="description" 
+                placeholder="Product Description" 
+                name="description" [(ngModel)]="product.description"></textarea> -->
+    
+    <input type="file" class="input-img mb-4" (change)="onFileChanged($event)" name="image" [(ngModel)]="product.image">
+    <span>
+        <button type="button" class="btn btn-success" (click)="addProduct(f)">Add Product</button>
+    </span>
+    <div class="col-12">
+        <img  [src]="imgURL" class="upload-img" *ngIf="imgURL">
+    </div>
+</form>
+</div>

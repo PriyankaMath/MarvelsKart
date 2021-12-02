@@ -1,0 +1,28 @@
+.btn-add-product{
+    margin: 40px 50px 20px 50px;
+}
+.img-responsive {
+    max-height: 60px;
+}
+.list-group-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 20px 50px 20px 50px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.product-details{
+    display: flex;
+    flex-direction: row;
+}
+.price {
+    margin-left: 20px;
+    font-size: 20px;
+}
+.product-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
