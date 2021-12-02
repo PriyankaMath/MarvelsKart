@@ -26,6 +26,15 @@ export class AdminComponent implements OnInit {
       (response) => {
         console.log(response);
         this.users = response;
+        this.users.forEach((element: any) => {
+          if(element.userrole == 1){
+            element.userrole = 'Admin';
+          } else if(element.userrole == 2){
+            element.userrole = 'Seller';
+          } else {
+            element.userrole = 'Customer';
+          }
+        });
       },
       (error) => console.log(error)
     );
@@ -56,6 +65,15 @@ export class AdminComponent implements OnInit {
       (response) => {
         console.log(response);
         this.users = response;
+        this.users.forEach((element: any) => {
+          if(element.username == 1){
+            element.username = 'Admin';
+          } else if(element.username == 2){
+            element.username = 'Seller';
+          } else {
+            element.username = 'Customer';
+          }
+        });
       },
       (error) => console.log(error)
     );

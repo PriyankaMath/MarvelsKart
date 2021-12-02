@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ApiService } from './services/api.service';
 // import { MsalService } from '@azure/msal-angular';
 // import { AuthenticationResult } from '@azure/msal-common';
 
@@ -9,12 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'marvels-app';
+  subscription: Subscription = new Subscription;
+  isAuthenticated : boolean = false;
 
-  constructor(){
-
+  constructor(private apiService: ApiService){
   }
 
   ngOnInit(): void {
+    this.subscription = this.apiService.isAuthenticated.subscribe(
+      (value) => {
+        this.isAuthenticated = value;
+      }
+    )
     // this.msalService.instance.handleRedirectPromise().then(
     //   res => {
     //     if(res != null && res.account !=null){

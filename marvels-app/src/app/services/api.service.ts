@@ -3,6 +3,7 @@ import { Product } from '../models/product';
 import { HttpClient } from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   currentUser: any;
+  public isAuthenticated = new Subject<boolean>();
 
   // BASE_URL = 'http://ec2-18-218-73-147.us-east-2.compute.amazonaws.com:8080/api/';
   BASE_URL = 'http://localhost:8080/api/';
@@ -23,6 +25,10 @@ export class ApiService {
   ];
 
   constructor(private http: HttpClient) { }
+
+  setAuthentication(isAuthenticated: boolean){
+    this.isAuthenticated.next(isAuthenticated);
+  }
 
   getProducts(): Observable<any[]>
   {
@@ -84,12 +90,20 @@ export class ApiService {
 
   placeOrder(items: any) {
     console.log(items);
-    let products = {
-      image: items[0].image.replace('https://mk-img-upload.s3.us-west-1.amazonaws.com/',''),
-      userId: this.currentUser.id,
-      amount: items[0].price
-    }
-
+    let products: any[] =[];
+    items.forEach((item: any)=>{
+      let product = {
+        name: item.name,
+        image: item.image.replace('https://mk-img-upload.s3.us-west-1.amazonaws.com/',''),
+        userId: this.currentUser.id,
+        amount: item.price
+      }
+      products.push(product);
+    })
+    console.log(products);
+  //  let body = {
+  //    products
+  //  }
     return this.http.post(this.BASE_URL+'Orders', products)
   }
 
