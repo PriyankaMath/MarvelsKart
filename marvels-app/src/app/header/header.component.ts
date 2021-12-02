@@ -36,6 +36,7 @@ export class HeaderComponent implements OnInit {
     let userPool = new CognitoUserPool(poolData);
     let cognitoUser = userPool.getCurrentUser();
     cognitoUser?.signOut();
+    this.apiService.isAuthenticated.next(false);
     this.router.navigate(["signin"])
   }
 
