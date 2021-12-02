@@ -12,7 +12,7 @@ export class SellerComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getProducts()
+    this.apiService.getProductsByUser()
     .subscribe(
       (response) => {
         console.log(response);

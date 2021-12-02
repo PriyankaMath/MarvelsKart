@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 // }
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     AddProductComponent,
     SignInComponent,
     SignUpComponent,
+    OrdersComponent,
     // LandingPageComponent,
     // LoginButtonComponent,
     // LoginComponent,
