@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
 export class CartComponent implements OnInit {
 
   public products: any = [];
-  public grandTotal !: number;
+  public grandTotal : number = 0;
   public orderPlaced: boolean = false;
 
   constructor(private cartService: CartService, private apiService: ApiService) { }

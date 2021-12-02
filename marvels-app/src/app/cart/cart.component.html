@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <ng-container *ngIf="products.length !=0 && !orderPlaced">
     <div class=container>
         <div class="card-table">
@@ -22,7 +22,7 @@
                             <!-- <td style="width: 12%;" class="product-description">{{item.description}}</td> -->
                             <td style="width: 12%;">{{item.price | currency}}</td>
                             <td style="width: 12%;">
-                                <a class="item-delete" (click)="removeItem(item)"><i class="fas fa-trash-alt"></i></a>
+                                <a class="item-delete" (click)="removeItem(i)"><i class="fas fa-trash-alt"></i></a>
                             </td>
                         </tr>
                     </tbody>
@@ -32,6 +32,7 @@
                 <!-- <button class="btn btn-danger" (click)="emptyCart()">Empty Cart</button> -->
                 <button routerLink="/home" class="btn btn-primary">Shop More</button>
                 <button class="btn btn-success" (click)="placeOrder(products)">Place Order</button>
+                <!-- <h4>Grand Total: {{grandTotal}}</h4> -->
             </div>
             <!-- <div>
                 <strong>Grand Total: ${{grandTotal}}</strong>

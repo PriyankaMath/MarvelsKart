@@ -38,6 +38,7 @@ export class SignInComponent implements OnInit {
       cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: (result) => {
           this.router.navigate(["home"])
+          this.apiService.isAuthenticated.next(true);
         },
         onFailure: (err) => {
           alert(err.message || JSON.stringify(err));
