@@ -13,8 +13,8 @@ export class ApiService {
   currentUser: any;
   public isAuthenticated = new Subject<boolean>();
 
-  // BASE_URL = 'http://ec2-18-218-73-147.us-east-2.compute.amazonaws.com:8080/api/';
-  BASE_URL = 'http://localhost:8080/api/';
+  BASE_URL = 'http://ec2-18-219-134-217.us-east-2.compute.amazonaws.com:8081/api/';
+  // BASE_URL = 'http://localhost:8080/api/';
 
   // products: Product[] = [
   //   new Product(1,'Product1', 'Description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 100, './../../assets/images/product1.jpg'),
