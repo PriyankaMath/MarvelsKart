@@ -5,23 +5,19 @@
 
 export const environment = {
   production: false,
-  cognitoUserPoolId: "us-east-1_nOVUQ5aJB",
-  cognitoAppClientId: "4pfslbj8gn1e8rmb7g7rcmvp0u",
+  cognitoUserPoolId: "userPoolID",
+  cognitoAppClientId: "AppClientId",
 
-  sso_api_username: '4pfslbj8gn1e8rmb7g7rcmvp0u',
-  sso_api_pwd: '10a5vtfaep03jfstc7felba4uf6rm1b3ki0j0gnf4gq3hmublbd3', 
+  sso_api_username: 'sso_api_username',
+  sso_api_pwd: 'sso_api_pwd', 
 
-  loginURL: 'https://marvelskart.auth.us-east-1.amazoncognito.com/login?'+
-            'client_id=4pfslbj8gn1e8rmb7g7rcmvp0u&response_type=code&scope=openid+profile&'+
-            'redirect_uri=http://localhost:4200/home',
+  loginURL: 'https://localhost:4200/home',
 
   redirectURL: 'http://localhost:4200/home',
 
-  cognitoTokenURL: 'https://marvelskart.auth.us-east-1.amazoncognito.com/oauth2/token',
+  cognitoTokenURL: 'https://localhost/oauth2/token',
 
-  logout: 'https://marvelskart.auth.us-east-1.amazoncognito.com/logout?' +
-          'client_id=4pfslbj8gn1e8rmb7g7rcmvp0u&' +
-          'logout_uri=http://localhost:4200/home'
+  logout: 'https://localhost:4200/home'
   // auth: {
   //   domain,
   //   clientId,
