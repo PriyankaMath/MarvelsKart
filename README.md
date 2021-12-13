@@ -1,5 +1,16 @@
 # MarvelsKart
 
+Submitted by
+Team Data Marvels
+   Priyanka Math    015240134
+   
+   Jithesh Kurungote Balakrishnan    	014654679
+   
+   Rajvi Shah    015523313
+   
+   Tharun Mukka     014640496
+
+
 8.1 Source Code Link - Front End
 
 https://github.com/PriyankaMath/MarvelsKart
